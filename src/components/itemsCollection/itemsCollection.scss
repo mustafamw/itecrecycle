@@ -9,7 +9,7 @@
   .item-collection {
     flex: 0 0 31.33%;
     margin: 1%;
-    background: white;
+    background-color: white;
     .image {
       position: relative;
       img {
@@ -21,8 +21,8 @@
         top: 0px;
         margin: 0px;
         padding: 0px;
-        background: gray;
-        background: #6b6b6bcf;
+        background-color: gray;
+        background-color: rgba($color: gray, $alpha: 0.8);;
         padding: 10px;
         color: white;
       }
