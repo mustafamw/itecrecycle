@@ -1,0 +1,10 @@
+@import '../../scss/global/Global';
+
+.baskets-list {
+  .title {
+    font-weight: 500;
+    padding-bottom: 3px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid $GREEN-A;
+  }
+}

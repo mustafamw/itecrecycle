@@ -1,0 +1,183 @@
+@import "../Responsive/Responsive";
+@import "../Variables/Variables";
+
+* {
+  outline-width: 0;
+}
+
+.height-100 {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+a.green {
+  color: $GREEN-B;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.button-green {
+  background: $GREEN-A;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: white !important;
+  }
+
+  @include respond-to(xxs) {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  @include respond-to(xs) {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+section {
+  .title {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+
+    @include respond-to(xxs) {
+      padding-top: 10px;
+      font-size: 1.7rem;
+    }
+    @include respond-to(xs) {
+      padding-top: 10px;
+      font-size: 1.7rem;
+    }
+  }
+
+  img {
+    width: 400px;
+    float: left;
+    margin: 10px;
+    margin-top: 0px;
+    margin-left: 0px;
+
+    @include respond-to(xxs) {
+      width: 100% !important;
+    }
+    @include respond-to(xs) {
+      width: 100% !important;
+    }
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.row {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+form {
+  .form-group {
+    .form-control {
+      border: 1px solid #efefef;
+      background: #efefef;
+    }
+    .error {
+      display: block;
+      color: $RED-A;
+      clear: both;
+    }
+    .input-error {
+      border: 1px solid $RED-A;
+      color: $RED-A;
+    }
+  }
+}
+
+.float-right {
+  float: right;
+}
+
+.formik {
+  margin: 0px auto !important;
+  form {
+    margin-top: 35%;
+    background: white;
+    padding: 20px;
+    display: inline-block;
+    width: 100%;
+    box-shadow: 0px 0px 20px black;
+    .form-group {
+      .form-control {
+        height: auto !important;
+      }
+      .row {
+        @include respond-to(xs){
+          .col-12 {
+            padding-right: 0px !important;
+            padding-left: 0px !important;
+          }
+          .col-12:first-child {
+            margin-bottom: 1em;
+          }
+        }
+        @include respond-to(xxs){
+          .col-12 {
+            padding-right: 0px !important;
+            padding-left: 0px !important;
+          }
+          .col-12:first-child {
+            margin-bottom: 1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+h1 {
+  font-size: 1.7em;
+}
+h2 {
+  font-size: 1.4em;
+}
+h3 {
+  font-size: 1em;
+}
+h4 {
+  font-size: 0.8em;
+}
+h5 {
+  font-size: 0.6em;
+}
+h6 {
+  font-size: 0.4em;
+}

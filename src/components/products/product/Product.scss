@@ -1,0 +1,69 @@
+@import '../../../scss/global/Global';
+
+.product{
+    flex: 0 0 23%;
+    margin: 1%;
+    background: white;
+    @include transition(all 0.5s ease-in-out);
+    @include respond-to(xl) {
+        flex: 0 0 23%;
+    }
+    @include respond-to(lg) {
+        flex: 0 0 23%;
+    }
+    @include respond-to(md) {
+        flex: 0 0 31.33%;
+    }
+    @include respond-to(sm) {
+        flex: 0 0 48%;
+    }
+    @include respond-to(xs) {
+        flex: 0 0 48%;
+    }
+    @include respond-to(xxs) {
+        flex: 0 0 100%;
+    }
+    a {
+
+        .image {
+            position: relative;
+
+            .price {
+                position: absolute;
+                right: 5px;
+                top: 5px;
+                z-index: 1;
+                background: $BLUE-A;
+                color: white;
+                padding: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                border-radius: 50px;
+            }
+        }
+
+        .title{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            clear: both;
+            text-align: center;
+            background: $GREEN-A;
+            color: white;
+            font-weight: 400;
+        }
+
+        &:hover {
+            .title {
+                text-decoration: underline;
+            }
+        }
+    }
+    img {
+        width: 100%;
+        margin: 0px;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}

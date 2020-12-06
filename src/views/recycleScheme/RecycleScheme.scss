@@ -1,0 +1,22 @@
+@import '../../scss/global/Global';
+
+.recycle-scheme {
+  img {
+    width: 100%;
+    margin: 0px;
+  }
+  section {
+    clear: both;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .green {
+    background-color: $GREEN-A;
+  }
+  .white {
+    background-color: $WHITE-A;
+  }
+  .grey {
+    background: $GREY-A;
+  }
+}

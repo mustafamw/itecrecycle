@@ -1,0 +1,54 @@
+@import '../../scss/global/Global';
+
+.confirmation-form {
+  width: 60% !important;
+  min-width: 320px;
+  margin: auto;
+
+  @include respond-to(sm){
+    width: 100% !important;
+  }
+
+  @include respond-to(xs){
+    width: 100% !important;
+  }
+
+  @include respond-to(xxs){
+    width: 100% !important;
+  }
+
+  table th {
+    text-align: left;
+  }
+  table.invoice {
+    width: 100%;
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+    border-width: 1px;
+    border-color: #84B82D;
+    border-style: solid;
+    color: #010302;
+  }
+
+  table.invoice tr {
+    border-bottom: 1px solid #84b82d;
+  }
+
+  table.invoice td {
+    text-align: left;
+  }
+
+  table.invoice td, table.invoice th {
+    border-width: 0px;
+    padding: 6px;
+  }
+
+  table.invoice thead {
+    background-color: #84B82D;
+    color: white;
+  }
+
+  .text-align-right {
+    text-align: right;
+  }
+}

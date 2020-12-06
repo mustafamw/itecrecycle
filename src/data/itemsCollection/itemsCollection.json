@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Computers",
+    "info": "Computer Recycling",
+    "img": "1.png"
+  },
+  {
+    "title": "Laptops",
+    "info": "Laptop Recycling",
+    "img": "2.png"
+  },
+  {
+    "title": "Monitors",
+    "info": "Monitor Recycling",
+    "img": "3.png"
+  },
+  {
+    "title": "Servers",
+    "info": "Server Recycling",
+    "img": "4.png"
+  },
+  {
+    "title": "Network Equipment",
+    "info": "Network Recycling",
+    "img": "5.png"
+  },
+  {
+    "title": "Hard Drive",
+    "info": "Hard Drive",
+    "img": "6.png"
+  },
+  {
+    "title": "Mobile Phones",
+    "info": "Mobile Phones Recycling",
+    "img": "7.png"
+  },
+  {
+    "title": "Landline Phones",
+    "info": "Landline Phones Recycling",
+    "img": "8.png"
+  },
+  {
+    "title": "Tablets",
+    "info": "Tablets Recycling",
+    "img": "9.png"
+  },
+  {
+    "title": "Printers",
+    "info": "Printers Recycling",
+    "img": "10.png"
+  }
+]

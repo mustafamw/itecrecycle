@@ -1,0 +1,30 @@
+.basket-item {
+  background: white;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 5px #e2e2e2;
+  .align-center {
+    align-items: center;
+  }
+  .quantity-container {
+    align-items: center;
+    .input-group {
+        align-items: center;
+    }
+    button {
+        height: 20px;
+        width: 20px;
+        padding: 0px;
+        margin: 0px;
+        line-height: 1px;
+        border-radius: 50px;
+        border: none;
+        text-align: center;
+        &:first-child {
+            margin-right: 5px;
+        }
+        &:last-child {
+            margin-left: 5px;
+        }
+    }
+}
+}

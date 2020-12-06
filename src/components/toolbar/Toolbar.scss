@@ -1,0 +1,58 @@
+@import '../../scss/global/Global';
+
+.toolbar {
+  background: $BLACK-A;
+  color: $GREEN-A;
+  text-align: right;
+  
+  ul {
+    margin: 0px;
+    padding: 3px;
+    list-style: none;
+    display: inline-flex;
+    li {
+      display: inline-flex;
+      margin-left: 20px;
+      .text {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .basket {
+    position: relative;
+    display: inline;
+    span {
+      position: absolute;
+      background: red;
+      color: white;
+      font-size: 10px;
+      text-align: center;
+      padding: 0px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      padding-left: 3px;
+      padding-right: 3px;
+      margin: 0px;
+      line-height: 7px;
+      border-radius: 50px;
+      right: 0px;
+      top: 13px;
+    }
+  }
+
+  a {
+    color: $GREEN-A;
+    &:hover {
+      color: $WHITE-A;
+    }
+  }
+
+  .logout {
+    color: $RED-A;
+    cursor: pointer;
+    &:hover {
+      color: $RED-A;
+    }
+  }
+}

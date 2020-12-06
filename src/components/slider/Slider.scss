@@ -1,0 +1,31 @@
+@import '../../scss/global/global';
+
+.carousel-slider{
+    .carousel-slider-item{
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        -o-background-size: cover !important;
+        background-size: cover !important;
+        height: 440px;
+        h1{
+            background: #00000096;
+            font-size: 2.5em;
+            @include respond-to(xs){
+                font-size: 2.1em;
+            }
+            @include respond-to(xxs){
+                font-size: 2.1em;
+            }
+        }
+        p{
+            background: #00000096;
+            font-size: 1.5em;
+            @include respond-to(xs){
+                font-size: 1.3em;
+            }
+            @include respond-to(xxs){
+                font-size: 1.3em;
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+@import '../../scss/global/Global';
+
+.view {
+    h3 {
+        margin-bottom: 5px;
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+
+    .price {
+        background: white;
+        text-align: center;
+        margin: 0px;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ced4da;    
+
+        h3 {
+            margin: 0px;
+        }
+    }
+
+    .quantity-container {
+        .input-group {
+            align-items: center;
+        }
+        button {
+            height: 20px;
+            width: 20px;
+            padding: 0px;
+            margin: 0px;
+            line-height: 1px;
+            border-radius: 50px;
+            border: none;
+            text-align: center;
+            &:first-child {
+                margin-right: 5px;
+            }
+            &:last-child {
+                margin-left: 5px;
+            }
+        }
+    }
+}

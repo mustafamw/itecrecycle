@@ -1,0 +1,95 @@
+@import '../../scss/global/Global';
+
+nav {
+    float: right;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    ul {
+        display:  flex;
+        margin: 0px;
+        padding: 0px;
+        
+        li {
+            list-style: none;
+
+            a {
+                display: block;
+                color: black;
+                margin-right: 10px;
+                font-size: 17px;
+                font-weight: 400;
+                border-bottom: 2px solid $GREEN-A;
+
+                &:hover {
+                    color: black;
+                }
+
+                &.active {
+                    color: $GREEN-A;
+                    border-bottom: none;
+                    font-weight: bold;
+
+                    @include respond-to(xs){
+                        color: black;
+                        border-bottom: 1px solid white;
+                    }
+
+                    @include respond-to(xxs){
+                        color: black;
+                        border-bottom: 1px solid white;
+                    }
+                }
+
+                @include respond-to(sm){
+                    font-size: 14px;
+                }
+
+                @include respond-to(xs){
+                    font-size: 14px;
+                    margin-right: 0px;
+                    border-bottom: 1px solid white;
+                    background: $GREEN-A;
+                    color: white;
+                    padding: 15px;
+                }
+
+                @include respond-to(xxs){
+                    font-size: 14px;
+                    margin-right: 0px;
+                    border-bottom: 1px solid white;
+                    background: $GREEN-A;
+                    color: white;
+                    padding: 15px;
+                }
+            }
+
+            
+            &:last-child {
+                a {
+                    margin-right: 0px;
+                }
+            }
+        }
+        @include respond-to(xs){
+            display: block;
+        }
+        @include respond-to(xxs){
+            display: block;
+        }
+    } 
+
+    @include respond-to(sm){
+        margin-top: 15px;
+    }
+
+    @include respond-to(xs){
+        float: none;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    @include respond-to(xxs){
+        float: none;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}

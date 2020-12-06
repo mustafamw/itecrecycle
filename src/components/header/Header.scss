@@ -1,0 +1,94 @@
+@import '../../scss/global/Global';
+
+header {
+    align-items: center;
+    color: black;
+    .logo {
+        img {
+            width: 60px;
+            float: left;
+            margin-right: 5px;
+        }
+        .title {
+            font-size: 40px;
+            font-weight: 400;
+
+            @include respond-to(sm){
+                font-size: 30px;
+            }
+
+            @include respond-to(xs){
+                font-size: 30px;
+            }
+
+            @include respond-to(xxs){
+                font-size: 30px;
+            }
+        }
+    }
+
+    .burger-menu{
+        text-align: right;
+        cursor: pointer;
+        img {
+            width: 25px;
+        }
+        @include respond-to(xl){
+            display: none;
+        }
+        @include respond-to(lg){
+            display: none;
+        }
+        @include respond-to(md){
+            display: none;
+        }
+        @include respond-to(sm){
+            display: none;
+        }
+    }
+
+    .nav-container {
+        .route{
+            @include respond-to(xl){
+                display: block !important;
+            }
+            @include respond-to(lg){
+                display: block !important;
+            }
+            @include respond-to(md){
+                display: block !important;
+            }
+            @include respond-to(sm){
+                display: block !important;
+            }
+            @include respond-to(xs){
+                position: relative;
+                padding: 0px;
+                clear: both;
+                padding-top: 5px;
+                margin-bottom: -5px;
+                right: 0px;
+            }
+            @include respond-to(xxs){
+                position: relative;
+                padding: 0px;
+                clear: both;
+                padding-top: 5px;
+                margin-bottom: -5px;
+                right: 0px;
+            }
+        }
+        @include respond-to(xs){
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        @include respond-to(xxs){
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+
+    .align-center {
+        align-items: center;
+    }
+}

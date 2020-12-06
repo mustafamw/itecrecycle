@@ -1,0 +1,31 @@
+@import '../Variables/Variables';
+
+.container{
+    width: 1300px !important;
+    max-width: 1300px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+    word-break: break-word;
+    margin: auto;
+
+    @include respond-to(xxs){
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    @include respond-to(xs){
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    @include respond-to(sm){
+        width: 90% !important;
+        max-width: 90% !important;
+    }
+    @include respond-to(md){
+        width: 90% !important;
+        max-width: 90% !important;
+    }
+    @include respond-to(lg){
+        width: 90% !important;
+        max-width: 90% !important;
+    }
+}

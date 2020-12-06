@@ -1,0 +1,23 @@
+@import '../../scss/global/Global';
+.root {
+  height: 100vh;
+}
+.wrap {
+  min-height: calc(100vh - 180px);
+  margin-bottom: -50px;
+  background: $WHITE-B;
+  &.resend-activation,
+  &.activate,
+  &.signup,
+  &.login,
+  &.forgot-password,
+  &.reset-password{
+    background: rgb(0,36,1);
+    background: linear-gradient(90deg, rgba(0,36,1,1) 0%, rgba(9,121,21,1) 100%, rgba(0,0,0,1) 100%);
+  }
+}
+
+.footer,
+.push {
+  height: 50px;
+}

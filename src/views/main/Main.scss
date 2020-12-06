@@ -1,0 +1,87 @@
+@import '../../scss/global/Global';
+
+.main-view {
+    .green {
+        color: white;
+        background: $GREEN-A;
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .white {
+        background: $WHITE-A;
+    }
+    .grey {
+        background: $GREY-A;
+    }
+    section {
+        background: $WHITE-A;
+        font-size: 20px;
+
+        i.fas {
+            font-size: 100px;
+            margin-bottom: 10px;
+
+            @include respond-to(xxs){
+                font-size: 70px;
+            }
+            @include respond-to(xs){
+                font-size: 70px;
+            }
+        }
+
+        .services {
+            .row {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            .service {
+                display: flex;
+                flex-flow: column nowrap;
+                margin-top: 70px;
+                margin-bottom: 70px;
+                @include respond-to(xxs){
+                    margin-top: 25px;
+                    margin-bottom: 25px;
+                }
+                @include respond-to(xs){
+                    margin-top: 35px;
+                    margin-bottom: 35px;
+                }
+
+                &:last-child {
+                    @include respond-to(xxs){
+                        margin-top: 0px;
+                    }
+                    @include respond-to(xs){
+                        margin-top: 0px;
+                    }
+                    
+                }
+                button {
+                    margin-top:auto;
+                }
+                }
+            }
+            
+            p {
+                margin-top: 10px;
+                padding-bottom: 20px;
+                @include respond-to(xxs){
+                    padding-bottom: 0px;
+                }
+                @include respond-to(xs){
+                    padding-bottom: 0px;
+                }
+            }
+
+            a {
+                display: block;
+                &:hover {
+                    .button-green {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
