@@ -50,18 +50,6 @@ class MainView extends React.Component {
                 Itec Recycle provide an end-to end solution for your redundant IT. We care about the environment that we live and work within. 
                 We strive to work towards a circular economy for IT assets.
               </p>
-              {/* <p>
-                iTec recycle offers products and services, recycling computers recovers valuable materials from old electronics that can be used to make new products. As a result, we save energy, reduce pollution, reduce greenhouse gas emissions, and save resources by extracting fewer raw materials from the earth.
-              </p>
-              <p>
-                Nowadays there is a growing demand for a PC engineer to come to the customer and repair any computer related problems onsite, to save on the inconvenience of taking the computer in to a shop and then possibly being without it for a number of days, especially important when the computer is part of a business and is in constant use!
-              </p>
-              <p>
-                Mobile Computer Services caters specifically to that need. Based in West Midlands, we provide a quick, reliable and professional PC and Laptop on-site repair service to both private and business owners in the Walsall, Wolverhampton, Birmingham and surrounding areas.
-              </p>
-              <p>
-                We also do Onsite Computer / Laptop repair and Data Erasing Destruction.
-              </p> */}
             </div>
           </div>
         </section>

@@ -38,7 +38,7 @@ class HeaderComponent extends React.Component {
                   {
                     <img srcSet={logo} alt="Logo" title="Logo" />
                   }
-                  <div className="title">iTec recycle</div>
+                  <div className="title">iTec Recycle</div>
                 </NavLink>
               </div>
             </div>
