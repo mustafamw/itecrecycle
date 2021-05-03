@@ -13,7 +13,7 @@ class Social extends Component{
                 </a>
             </div>
             <div className="share">
-                <a href="#" rel="noopener noreferrer" target="_blank">
+                <a href="https://www.instagram.com/itecrecycle/" rel="noopener noreferrer" target="_blank">
                     <img src={instagram} alt="Instagram"/>
                 </a>
             </div>
