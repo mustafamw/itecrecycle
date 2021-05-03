@@ -30,7 +30,7 @@ class Footer extends Component {
               <h4>CONTACT US</h4>
               <div className="clear-both"></div>
               <small>
-                info@itecrecycle.co.uk<br />
+                support@itecrecycle.com<br />
                 {/* <span className="curser-pointer" onClick={this.call}>
                   {ContactNo}
                 </span> */}

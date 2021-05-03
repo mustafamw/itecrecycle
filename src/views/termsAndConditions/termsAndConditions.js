@@ -82,7 +82,7 @@ class TermsAndConditionsView extends Component{
               of the linking party and it products or services; and (c) fits within the context of the linking party's
               site.</p>
               <p>If you are among the organizations listed in paragraph 2 above and are interested in linking to our website,
-              you must notify us by sending an e-mail to <a href="mailto:info@itecrecycle.co.uk" title="send an email to info@itecrecycle.co.uk">info@itecrecycle.co.uk</a>.
+              you must notify us by sending an e-mail to <a href="mailto:support@itecrecycle.com" title="send an email to support@itecrecycle.com">support@itecrecycle.com</a>.
               Please include your name, your organization name, contact information (such as a phone number and/or e-mail
               address) as well as the URL of your site, a list of any URLs from which you intend to link to our Web site,
               and a list of the URL(s) on our site to which you would like to link. Allow 2-3 weeks for a response.</p>
