@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 import { isEmpty } from 'lodash';
 import { getCookies } from '../../utils/cookies';
 import LoginModalComponent  from '../modals/loginModal/LoginModal';
-
+import Tooltip from "react-simple-tooltip"
 class BookCollectionComponent extends React.Component {
   componentWillUnmount() {
     this.props.setItemsCollectionReset();
@@ -233,23 +233,33 @@ class BookCollectionComponent extends React.Component {
                   {errors.message && errors.message}
                 </small>
               </div>
-              <button type="submit" 
-                className="btn btn-primary btn-block btn-lg p-3 rounded-0" 
-                disabled={loading || !isLoggedIn}>
-                Book Item Collection
-              </button>
+
               {
                 !isLoggedIn ? 
                 (
                   <>
+                    <Tooltip content="Please Signup/Login to continue booking" className="display-block">
+                      <button type="submit" 
+                        className="btn btn-primary btn-block btn-lg p-3 rounded-0" 
+                        disabled={loading || !isLoggedIn}>
+                        Book Item Collection
+                      </button>
+                    </Tooltip>
                     <button
-                    className="btn btn-primary btn-block btn-lg p-3 rounded-0"
-                    data-toggle="modal" 
-                    data-target="#loginModal" 
-                    >Login</button>
+                      className="btn btn-primary btn-block btn-lg p-3 rounded-0"
+                      data-toggle="modal" 
+                      data-target="#loginModal" 
+                      >Login</button>
                     <LoginModalComponent />
                   </>
-                  ) : null
+                  ) : 
+                  <>
+                    <button type="submit" 
+                      className="btn btn-primary btn-block btn-lg p-3 rounded-0" 
+                      disabled={loading || !isLoggedIn}>
+                      Book Item Collection
+                    </button>
+                  </>
               }
             </form>
           )}

@@ -9,6 +9,7 @@ import { withRouter } from "react-router-dom";
 import $ from 'jquery';
 import ConfirmBookingComponent from '../modals/confirmBooking/ConfirmBooking';
 import { setItem } from '../../utils/sessionStorage';
+import Tooltip from "react-simple-tooltip"
 
 const confirmBookingId = 'confirmBooking';
 
@@ -66,14 +67,17 @@ class BasketSummaryComponent extends React.Component {
                 <b>{ currencyFormat(totalPrice) }</b>
               </div>
               <div className="col-12">
-                <button
-                  className="btn btn-primary btn-block btn-sm rounded-0" 
-                  disabled={!isLoggedIn || totalPrice <= 0}
-                  onClick={this.confirmBooking}>Book It</button>
                 {
                   !isLoggedIn ? 
                   (
                     <>
+                      <Tooltip content="Please Signup/Login to continue booking" className="display-block">
+                        <button
+                          className="btn btn-primary btn-block btn-sm rounded-0" 
+                          disabled={!isLoggedIn}
+                          data-tip
+                          data-for="registerTip">Book It</button>
+                      </Tooltip>
                       <button
                       className="btn btn-primary btn-block btn-sm rounded-0"
                       data-toggle="modal" 
@@ -81,7 +85,15 @@ class BasketSummaryComponent extends React.Component {
                       >Login</button>
                       <LoginModalComponent />
                     </>
-                    ) : null
+                    ) : 
+                    <>
+                      <button
+                        className="btn btn-primary btn-block btn-sm rounded-0" 
+                        disabled={totalPrice <= 0}
+                        onClick={this.confirmBooking}
+                        data-tip
+                        data-for="registerTip">Book It</button>
+                    </>
                 }
               </div>
             </div>

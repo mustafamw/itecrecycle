@@ -43,9 +43,9 @@ const baskets = (state = initState, action) => {
         baskets: state.baskets.filter((e) => e.productId !== productId),
       }
     case 'REMOVE_BASKET_INDEX':
-      state.baskets.splice(index, 1);
       return {
         ...state,
+        baskets: state.baskets.filter((e, i) => i !== index),
       }
     case 'INCREMENT_BASKET_BY_PRODUCT_ID':
       const basketIncrement = state.baskets.find(e => e.productId === productId);

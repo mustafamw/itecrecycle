@@ -28,7 +28,7 @@ class MainView extends React.Component {
                 </Link>
               </div>
               <div className="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 service">
-                <Link to="/items-collection">
+                <Link to="/items-collection/book">
                   <i className="fas fa-laptop"></i>
                   <h2>Items We Collect</h2>
                   <p>We collect Computers, Laptops, Mobiles and more...</p>
