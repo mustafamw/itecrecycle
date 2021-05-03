@@ -13,25 +13,31 @@ class MainView extends React.Component {
             <div className="row">
               <div className="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 service">
                 <Link to="/recycle-scheme">
-                  <i className="fas fa-recycle"></i>
-                  <h2>Recycle Scheme</h2>
-                  <p>We Recycle any Laptops/Computers & IT Equipments</p>
+                  <div className="info">
+                    <i className="fas fa-recycle"></i>
+                    <h2>Recycle Scheme</h2>
+                    <p>We Recycle any Laptops/Computers & IT Equipments</p>
+                  </div>
                   <button className="button-green">Find out more ...</button>
                 </Link>
               </div>
               <div className="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 service">
                 <Link to="/data-destruction">
-                  <i className="fas fa-folder-open"></i>
-                  <h2>Data Destruction</h2>
-                  <p>High level Data Destruction Services</p>
+                  <div className="info">
+                    <i className="fas fa-folder-open"></i>
+                    <h2>Data Destruction</h2>
+                    <p>High level Data Destruction Services</p>
+                  </div>
                   <button className="button-green">Find out more ...</button>
                 </Link>
               </div>
               <div className="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 service">
                 <Link to="/items-collection/book">
-                  <i className="fas fa-laptop"></i>
-                  <h2>Items We Collect</h2>
-                  <p>We collect Computers, Laptops, Mobiles and more...</p>
+                  <div className="info">
+                    <i className="fas fa-laptop"></i>
+                    <h2>Items We Collect</h2>
+                    <p>We collect Computers, Laptops, Mobiles and more...</p>
+                  </div>
                   <button className="button-green">Find out more ...</button>
                 </Link>
               </div>
