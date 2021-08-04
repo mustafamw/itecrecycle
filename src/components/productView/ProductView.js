@@ -5,7 +5,7 @@ import { currencyFormat } from '../../utils/formatCurrency';
 import moment from 'moment';
 import { incrementQuantity, decrementQuantity, setProductQuantity } from '../../redux/actions/product/product';
 import { addBasket, removeBasketProductId, incrementBasketByProductId, decrementBasketByProductId } from '../../redux/actions/baskets/baskets';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 class ProductViewComponent extends React.Component {   
 
   constructor(props) {
@@ -29,10 +29,10 @@ class ProductViewComponent extends React.Component {
       <div className="container view">
         <div className="row">
           <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
-            <img srcSet={image} alt={title} title={title} />
+            <img srcSet={image} alt={title} title={title} className="m-0"/>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
-            <h1>
+            <h1 className="title">
               {title}
             </h1>
             <h3>
@@ -48,6 +48,7 @@ class ProductViewComponent extends React.Component {
             </p>
             <p>
               <div className="row">
+                { productState.product.stock > 0 ?
                 <div className="col-3 p-0 quantity-container">
                   <h3>
                     Quantity
@@ -55,16 +56,13 @@ class ProductViewComponent extends React.Component {
                   <div className="input-group mb-3">
                     <button className="btn btn-sm btn-secondary"
                       onClick={(e) => { decrementQuantity(productState.product) }}
-                      disabled={quantity <= 1}>-</button>
+                      disabled={quantity <= 1}><FontAwesomeIcon icon="minus" /></button>
                     <h3 className="p-0 m-0">{quantity}x</h3>
                     <button className="btn btn-sm btn-secondary"
                       onClick={(e) => { incrementQuantity(productState.product) }}
-                      disabled={quantity >= stock}>+</button>
+                      disabled={quantity >= stock}><FontAwesomeIcon icon="plus" /></button>
                   </div>
-                </div>
-                <div className="col-1">
-
-                </div>
+                </div> : null }
                 <div className="col-12 p-0">
                   <h3>
                     Total
@@ -84,7 +82,7 @@ class ProductViewComponent extends React.Component {
                 </button>
                 :
                 <button type="button"
-                  className="btn btn-secondary btn-block btn-lg rounded-0"
+                  className="btn btn-secondary btn-block btn-lg rounded-0 out-of-stock"
                   disabled="true">
                   OUT OF STOCK
                 </button>

@@ -106,7 +106,7 @@ class Routers extends React.Component {
             getItem('confirmation') ? <ConfirmationView {...props} /> : <Redirect to='/products' />
           )}
         />
-        <Redirect from='*' to='/' />
+        <Redirect exact={false} from='*' to='/' />
       </Switch>
     );
   }

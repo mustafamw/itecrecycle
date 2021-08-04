@@ -6,13 +6,13 @@ import BookCollectionComponent from '../../components/bookCollection/BookCollect
 class BookCollectionView extends React.Component {
   render() {
     return (
-      <div className="items-collection">
+      <div className="items-collection pt-2">
         <section>
           <div className="container">
             <div className="row">
               <div className="col-12">
-                <h1 className="title p-0 pb-2">Book a collection</h1>
-                <p className="pt-3 pb-2">
+                <h1 className="title">Book a collection</h1>
+                <p className="pt-2 pb-2">
                   <Link to="/items-collection" className="button-green">Items We Collect</Link>
                 </p>
               </div>

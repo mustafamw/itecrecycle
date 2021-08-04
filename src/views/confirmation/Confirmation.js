@@ -30,7 +30,7 @@ class ConfirmationView extends React.Component {
           <h3><u>Reference No: <b>{referenceNo}</b></u></h3>
           <p>Thank you <b>{firstName} {lastName}</b>, we have sent an invoice to your email address: <b>{email}</b> which you should able to recieve it shorty. 
           If not please do check your junk mail.</p>
-          <table class="invoice">
+          <table className="invoice">
             <thead>
               <tr>
                 <th>
@@ -50,7 +50,7 @@ class ConfirmationView extends React.Component {
             <tbody>
               {productsFormat}
               <tr>
-                <th class="text-align-right" colspan="3">
+                <th className="text-align-right" colspan="3">
                   Total:
                 </th>
                 <td>

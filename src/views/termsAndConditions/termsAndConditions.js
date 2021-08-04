@@ -8,7 +8,7 @@ class TermsAndConditionsView extends Component{
         <section>
           <div className="container terms-and-conditions">
             <div className="col-12">
-              <h1 className="text-align-center">Terms and Conditions</h1>
+              <h1 className="title text-align-center">Terms and Conditions</h1>
               <p>These terms and conditions outline the rules and regulations for the use of iTec Recycle Website.</p> <br /> 
               <p>By accessing this website we assume you accept these terms and conditions in full. Do not continue to use iTec Recycle website 
               if you do not accept all of the terms and conditions stated on this page.</p>

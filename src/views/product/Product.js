@@ -23,9 +23,11 @@ class ProductView extends React.Component {
         }
 
         return (
-            <div className="product-view">
-                { loaded ? <ProductViewComponent {...this.props}/> : null }
-            </div>
+            <section>
+                <div className="product-view pt-2">
+                    { loaded ? <ProductViewComponent {...this.props}/> : null }
+                </div>
+            </section>
         )
     }
 }

@@ -6,11 +6,11 @@ import ItemsCollectionComponent from '../../components/itemsCollection/ItemsColl
 class ItemsCollectionView extends React.Component {
   render() {
     return (
-      <div className="items-collection">
+      <div className="items-collection pt-2">
         <section>
           <div className="container">
             <div className="col-12">
-              <h1 className="title p-0 pb-2">Items We Collect</h1>
+              <h1 className="title">Items We Collect</h1>
             </div>
             <div className="row">
               <div className="col-12">

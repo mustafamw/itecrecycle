@@ -31,7 +31,8 @@
             width: 20px;
             padding: 0px;
             margin: 0px;
-            line-height: 1px;
+            font-size: 10px;
+            line-height: 10px;
             border-radius: 50px;
             border: none;
             text-align: center;
@@ -42,5 +43,10 @@
                 margin-left: 5px;
             }
         }
+    }
+    
+    .out-of-stock {
+        background-color: #ff0000 !important;
+        border-color: #ff0000 !important;
     }
 }

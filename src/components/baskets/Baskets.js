@@ -39,7 +39,7 @@ class BasketsComponent extends React.Component {
       <>
         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
           <div className="baskets-list">
-            {title}
+            {/* {title} */}
             {baskets.length > 0 ? baskets : 'Not found'}
           </div>
         </div>

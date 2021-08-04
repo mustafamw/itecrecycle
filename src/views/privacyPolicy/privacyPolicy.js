@@ -8,7 +8,7 @@ class PrivacyPolicyView extends React.Component {
         <section>
             <div className="container privacy-policy">
                 <div className="col-12">
-                    <h1 className="text-align-center">Privacy Policy</h1>
+                    <h1 className="title text-align-center">Privacy Policy</h1>
                     <h3>Your privacy is critically important to us.</h3>
                     <p>It is iTec Recycle's policy to respect your privacy regarding any information we may collect while operating our website. This Privacy Policy applies to <a href="http://www.itecrecycle.co.uk">www.itecrecycle.co.uk</a> (hereinafter, "us", "we", or "www.itecrecycle.co.uk"). We respect your privacy and are committed to protecting personally identifiable information you may provide us through the Website. We have adopted this privacy policy ("Privacy Policy") to explain what information may be collected on our Website, how we use this information, and under what circumstances we may disclose the information to third parties. This Privacy Policy applies only to information we collect through the Website and does not apply to our collection of information from other sources.</p>
                     <p>This Privacy Policy, together with the Terms and conditions posted on our Website, set forth the general rules and policies governing your use of our Website. Depending on your activities when visiting our Website, you may be required to agree to additional terms and conditions.</p>

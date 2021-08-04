@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './App.scss';
 import Routers from '../../routers/Routers';
-import { BrowserRouter as Router, useLocation } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import HeaderComponent from '../header/Header';
 import FooterComponent from '../footer/Footer';
 import ToolbarComponent from '../toolbar/Toolbar';

@@ -12,7 +12,7 @@ header {
         .title {
             font-size: 40px;
             font-weight: 400;
-
+            white-space: nowrap;
             @include respond-to(sm){
                 font-size: 30px;
             }
