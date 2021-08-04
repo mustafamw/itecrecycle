@@ -46,7 +46,6 @@ class ProductViewComponent extends React.Component {
             <p>
               {moment(created).format('DD/MM/YYYY hh:mmA')}
             </p>
-            <p>
               <div className="row">
                 { productState.product.stock > 0 ?
                 <div className="col-3 p-0 quantity-container">
@@ -72,7 +71,6 @@ class ProductViewComponent extends React.Component {
                   </div>
                 </div>
               </div>
-            </p>
             <p>
               { productState.product.stock > 0 ?
                 <button type="button"

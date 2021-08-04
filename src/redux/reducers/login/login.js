@@ -45,6 +45,7 @@ const login = (state = initState, action) => {
         ...state,
         isLoggedIn: false,
         loading: false,
+        loaded: false,
         data: undefined,
         errors: undefined,
       }

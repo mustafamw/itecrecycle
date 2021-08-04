@@ -19,9 +19,7 @@ export const setResetPassword = (data) => {
   }
 };
 
-export const setResetPasswordError = (errors) => {
-  return {
-    type: 'SET_RESET_PASSWORD_ERROR',
-    data: errors,
-  }
-};
+export const setResetPasswordError = (errors) => ({
+  type: 'SET_RESET_PASSWORD_ERROR',
+  data: errors
+});

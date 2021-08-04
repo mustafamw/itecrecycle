@@ -4,7 +4,7 @@ import { currencyFormat } from '../../../utils/formatCurrency';
 class ConfirmBookingComponent extends React.Component {
   render() {
     return (
-      <div className="modal fade" id={this.props.confirmBookingId} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div className="modal fade" id={this.props.confirmBookingId} tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog" role="document">
           <div className="modal-content rounded-0">
             <div className="modal-header">

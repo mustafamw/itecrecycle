@@ -1,4 +1,7 @@
 import { store } from '../redux/store/store';
+import {
+  logout
+} from '../redux/actions/login/login'
 import { config } from '../config/config';
 import { addAlert } from '../redux/actions/alert/alert';
 const axios = require('axios');
@@ -31,9 +34,13 @@ export const httpRequest = (method, url, headers, body, dispatch, dispatchError)
             switch(type) {
               case 'jwt.valid':
                 store.dispatch(addAlert({ type: 'danger', message: 'Link is not valid' }))
+                store.dispatch(logout())
                 break;
               case 'jwt.expired':
                 store.dispatch(addAlert({ type: 'danger', message: 'Link has expired' }))
+                store.dispatch(logout())
+                break;
+              default:
                 break;
             }
           }

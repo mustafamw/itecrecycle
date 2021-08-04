@@ -35,12 +35,16 @@ class BasketsComponent extends React.Component {
       </div>
     );
 
+    const notFound = (
+      <h3 className="not-found mt-3 mb-4">Not Found...</h3>
+    );
+
     return (
       <>
         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
           <div className="baskets-list">
             {/* {title} */}
-            {baskets.length > 0 ? baskets : 'Not found'}
+            {baskets.length > 0 ? baskets : notFound}
           </div>
         </div>
         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 pl-lg-0 pl-xl-0">

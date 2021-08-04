@@ -18,9 +18,7 @@ export const setForgotPassword = (data) => {
   }
 };
 
-export const setForgotPasswordError = (errors) => {
-  return {
-    type: 'SET_FORGOT_PASSWORD_ERROR',
-    data: errors,
-  }
-};
+export const setForgotPasswordError = (errors) => ({
+  type: 'SET_FORGOT_PASSWORD_ERROR',
+  data: errors,
+});

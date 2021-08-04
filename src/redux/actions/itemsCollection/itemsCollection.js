@@ -17,15 +17,11 @@ export const setItemsCollection = (data) => {
   }
 };
 
-export const setItemsCollectionReset = () => {
-  return {
-    type: 'SET_ITEMS_COLLECTION_RESET',
-  }
-};
+export const setItemsCollectionReset = () => ({
+  type: 'SET_ITEMS_COLLECTION_RESET',
+});
 
-export const setItemsCollectionError = (errors) => {
-  return {
-    type: 'SET_ITEMS_COLLECTION_ERROR',
-    data: errors,
-  }
-};
+export const setItemsCollectionError = (errors) => ({
+  type: 'SET_ITEMS_COLLECTION_ERROR',
+  data: errors,
+});

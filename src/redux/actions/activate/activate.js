@@ -20,9 +20,7 @@ export const setActivate = (data) => {
   }
 };
 
-export const setActivateError = (errors) => {
-  return {
-    type: 'SET_ACTIVATE_ERROR',
-    data: errors,
-  }
-};
+export const setActivateError = (errors) => ({
+  type: 'SET_ACTIVATE_ERROR',
+  data: errors,
+});

@@ -19,9 +19,7 @@ export const setContactUs= (data) => {
 };
 
 
-export const setContactUsError = (errors) => {
-  return {
-    type: 'SET_CONTACT_US_ERROR',
-    data: errors,
-  }
-};
+export const setContactUsError = (errors) => ({
+  type: 'SET_CONTACT_US_ERROR',
+  data: errors,
+});

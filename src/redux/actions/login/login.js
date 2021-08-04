@@ -25,11 +25,9 @@ export const setLogin = (data) => {
 };
 
 
-export const setLoginReset = () => {
-  return {
-    type: 'SET_LOGIN_RESET',
-  }
-};
+export const setLoginReset = () => ({
+  type: 'SET_LOGIN_RESET',
+});
 
 export const setLoginError = (errors) => {
   removeCookies('jwt');

@@ -17,15 +17,11 @@ export const setSignup = (data) => {
   }
 };
 
-export const setSignupReset = () => {
-  return {
-    type: 'SET_SIGNUP_RESET',
-  }
-};
+export const setSignupReset = () => ({
+  type: 'SET_SIGNUP_RESET',
+});
 
-export const setSignupError = (errors) => {
-  return {
-    type: 'SET_SIGNUP_ERROR',
-    data: errors,
-  }
-};
+export const setSignupError = (errors) => ({
+  type: 'SET_SIGNUP_ERROR',
+  data: errors,
+});

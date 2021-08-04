@@ -21,16 +21,12 @@ export const setResendActivation = (data) => {
 };
 
 
-export const setResendActivationReset = () => {
-  return {
-    type: 'SET_RESEND_ACTIVATION_RESET',
-  }
-};
+export const setResendActivationReset = () => ({
+  type: 'SET_RESEND_ACTIVATION_RESET',
+});
 
 
-export const setResendActivationError = (errors) => {
-  return {
-    type: 'SET_RESEND_ACTIVATION_ERROR',
-    data: errors,
-  }
-};
+export const setResendActivationError = (errors) => ({
+  type: 'SET_RESEND_ACTIVATION_ERROR',
+  data: errors,
+});

@@ -67,8 +67,6 @@ export const setBookBasketError = (errors) => {
   }
 };
 
-export const resetBookBasket = () => {
-  return {
-    type: 'RESET_BOOK_BASKET'
-  }
-}
+export const resetBookBasket = () => ({
+  type: 'RESET_BOOK_BASKET'
+});

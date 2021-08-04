@@ -8,18 +8,14 @@ export const resetPasswordValid = (headers) => {
   }
 }
 
-export const setResetPasswordValid = (data) => {
-  return {
-    type: 'SET_RESET_PASSWORD_VALID',
-    data: {
-      valid: true,
-    },
+export const setResetPasswordValid = (data) => ({
+  type: 'SET_RESET_PASSWORD_VALID',
+  data: {
+    valid: true,
   }
-};
+});
 
-export const setResetPasswordError = (errors) => {
-  return {
-    type: 'SET_RESET_PASSWORD_VALID_ERROR',
-    data: errors,
-  }
-};
+export const setResetPasswordError = (errors) => ({
+  type: 'SET_RESET_PASSWORD_VALID_ERROR',
+  data: errors
+});
