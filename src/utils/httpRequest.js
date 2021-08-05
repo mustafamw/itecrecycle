@@ -9,19 +9,19 @@ const httpStatus = require('http-status');
 const { isEmpty } = require('lodash');
 
 
-export const httpRequest = (method, url, headers, body, dispatch, dispatchError) => {
-  const { api } = config.app;
-  axios[method](`${api}/${url}`, {
-    ...body
-  }, {
-    headers: {
-      ...headers
-    }
-  })
-  .then((response) => {
-    store.dispatch(dispatch(response.data));
-  })
-  .catch((error) => {
+export const httpRequest = async (method, url, headers, body) => {
+  try {
+    const { api } = config.app;
+    const data = await axios[method](`${api}/${url}`, {
+      ...body
+    }, { 
+      headers: {
+        ...headers
+      }
+    })
+    return data.data;
+  }
+  catch(error) {
     try {
       const { data } = error && error.response;
       switch (data.code) {
@@ -61,12 +61,9 @@ export const httpRequest = (method, url, headers, body, dispatch, dispatchError)
           store.dispatch(addAlert({ type: 'danger', message: 'We\'re sorry, but we\'re having some technical difficulties. Please try again later' }))
           break;
       }
-      if (dispatchError) {
-        store.dispatch(dispatchError(data));
-      }
-    } catch (e) {
-      store.dispatch(addAlert({ type: 'danger', message: 'We\'re sorry, but we\'re having some technical difficulties. Please try again later' }))
-      store.dispatch(dispatchError(e));
+      throw data;
+    } catch (error) {
+      throw error;
     }
-  });
+  };
 }

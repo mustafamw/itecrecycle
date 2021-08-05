@@ -7,17 +7,18 @@ const initState = {
 }
 
 const products = (state = initState, action) => {
-  const { type, data } = action;
+  const { type, data, errors } = action;
   switch (type) {
     case 'GET_PRODUCTS':
       return {
         ...state,
-        loading: true
+        loading: true,
+        loaded: false,
       }
     case 'SET_PRODUCTS':
       return {
         ...state,
-        products: state.products.concat(JSON.parse(JSON.stringify(data.data))),
+        products: [...state.products, ...data.data],
         pagination: data.metaData.pagination,
         loading: false,
         loaded: true,
@@ -25,7 +26,7 @@ const products = (state = initState, action) => {
     case 'SET_PRODUCTS_ERROR':
       return {
         ...state,
-        errors: data,
+        errors,
         loading: false,
         loaded: true,
       }

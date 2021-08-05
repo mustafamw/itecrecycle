@@ -6,7 +6,7 @@ const initState = {
 }
 
 const itemsCollection = (state = initState, action) => {
-  const { type, data } = action;
+  const { type, data, errors } = action;
   switch (type) {
     case 'ITEMS_COLLECTION':
       return {
@@ -33,7 +33,7 @@ const itemsCollection = (state = initState, action) => {
         ...state,
         loading: false,
         loaded: true,
-        errors: data,
+        errors
       }
     default:
       return state

@@ -35,14 +35,6 @@ class ToolbarComponent extends React.Component {
                   </NavLink>
                 </li>:
                 <>
-                  {/* <li>
-                    <NavLink to="/my-account" activeClassName="active">
-                      <FontAwesomeIcon icon="user-edit" />
-                      <span className="text">
-                        My Account
-                      </span>
-                    </NavLink>
-                  </li> */}
                   <li>
                     <div className="logout" onClick={ () => { logout() } }>
                       <FontAwesomeIcon icon="sign-out-alt" />

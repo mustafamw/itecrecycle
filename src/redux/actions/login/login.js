@@ -7,35 +7,33 @@ import {
 import jwt_decode from "jwt-decode";
 import $ from 'jquery';
 
-export const login = (payload) => {
-  httpRequest(requestMethod.POST, `v1/login`, {}, payload, setLogin, setLoginError);
-  return {
-    type: 'LOGIN'
-  }
+export function login(payload) {
+  return async (dispatch) => {
+      try {
+          dispatch({
+              type: 'LOGIN',
+          });
+          const data = await httpRequest(requestMethod.POST, `v1/login`, {}, payload)
+          setCookies('jwt', data.token);
+          $(`#loginModal`).modal('hide');
+          $('body').removeClass('modal-open');
+          dispatch({
+              type: 'SET_LOGIN',
+              data: jwt_decode(data.token)
+          });
+      } catch (errors) {
+        removeCookies('jwt');
+        dispatch({
+          type: 'SET_LOGIN_ERROR',
+          errors
+        });
+      }
+  };
 }
-
-export const setLogin = (data) => {
-  setCookies('jwt', data.token);
-  $(`#loginModal`).modal('hide');
-  $('body').removeClass('modal-open');
-  return {
-    type: 'SET_LOGIN',
-    data: jwt_decode(data.token),
-  }
-};
-
 
 export const setLoginReset = () => ({
   type: 'SET_LOGIN_RESET',
 });
-
-export const setLoginError = (errors) => {
-  removeCookies('jwt');
-  return {
-    type: 'SET_LOGIN_ERROR',
-    data: errors,
-  }
-};
 
 export const logout = () => {
   removeCookies('jwt');

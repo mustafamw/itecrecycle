@@ -7,7 +7,7 @@ const initState = {
 }
 
 const login = (state = initState, action) => {
-  const { type, data } = action;
+  const { type, data, errors } = action;
   switch (type) {
     case 'LOGIN':
       return {
@@ -38,7 +38,7 @@ const login = (state = initState, action) => {
         isLoggedIn: false,
         loading: false,
         loaded: true,
-        errors: data,
+        errors
       }
     case 'LOGOUT':
       return {

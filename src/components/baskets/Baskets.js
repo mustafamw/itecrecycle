@@ -21,20 +21,6 @@ class BasketsComponent extends React.Component {
         decrementBasketByIndex={decrementBasketByIndex} />
     ));
 
-    const title = (
-      <div className="row title">
-        <div className="col-8 pl-0">
-          Items
-        </div>
-        <div className="col-2">
-          Quantity
-        </div>
-        <div className="col-2 text-right">
-          Total
-        </div>
-      </div>
-    );
-
     const notFound = (
       <h3 className="not-found mt-3 mb-4">Not Found...</h3>
     );

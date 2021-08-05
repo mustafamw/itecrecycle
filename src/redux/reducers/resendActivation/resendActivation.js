@@ -6,7 +6,7 @@ const initState = {
 }
 
 const resendActivation = (state = initState, action) => {
-  const { type, data } = action;
+  const { type, data, errors } = action;
   switch (type) {
     case 'RESEND_ACTIVATION':
       return {
@@ -31,7 +31,7 @@ const resendActivation = (state = initState, action) => {
     case 'SET_RESEND_ACTIVATION_ERROR':
       return {
         ...state,
-        errors: data,
+        errors,
         loading: false,
         loaded: true,
       }

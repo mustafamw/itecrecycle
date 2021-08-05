@@ -42,30 +42,30 @@ export const clearBasket = () => ({
   type: 'CLEAR_BASKET',
 });
 
-export const bookBasket = (headers, payload) => {
-  httpRequest(requestMethod.POST, `v1/basket/book`, headers, payload, setBookBasket, setBookBasketError);
-  return {
-    type: 'BOOK_BASKET'
-  }
+
+export function bookBasket(headers, payload) {
+  return async (dispatch) => {
+      try {
+          dispatch({
+              type: 'BOOK_BASKET',
+          });
+          const data = await httpRequest(requestMethod.POST, `v1/basket/book`, headers, payload)
+          store.dispatch(clearBasket());
+          dispatch({
+              type: 'SET_BOOK_BASKET',
+              data
+          });
+      } catch (errors) {
+        if(errors && errors.code === 403) {
+          store.dispatch(clearBasket());
+        }
+        dispatch({
+          type: 'SET_BOOK_BASKET_ERROR',
+          errors
+        });
+      }
+  };
 }
-
-export const setBookBasket = (data) => {
-  store.dispatch(clearBasket());
-  return {
-    type: 'SET_BOOK_BASKET',
-    data
-  }
-};
-
-export const setBookBasketError = (errors) => {
-  if(errors && errors.code === 403) {
-    store.dispatch(clearBasket());
-  }
-  return {
-    type: 'SET_BOOK_BASKET_ERROR',
-    data: errors,
-  }
-};
 
 export const resetBookBasket = () => ({
   type: 'RESET_BOOK_BASKET'

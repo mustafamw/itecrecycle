@@ -5,7 +5,6 @@ import ItemsCollection from '../../data/itemsCollection/itemsCollection.json';
 
 class ItemsCollectionComponent extends React.Component {
   render() {
-    console.log(ItemsCollection);
     const itemsCollection = ItemsCollection.map((item) => {
       const { title, info, img } = item;
       const image = require(`../../assets/img/itemsCollection/${img}`);

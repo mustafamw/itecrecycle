@@ -6,7 +6,7 @@ const initState = {
 }
 
 const product = (state = initState, action) => {
-  const { type, data, quantity} = action;
+  const { type, data, quantity, errors} = action;
   switch (type) {
     case 'GET_PRODUCTS':
       return {
@@ -15,18 +15,18 @@ const product = (state = initState, action) => {
         loaded: false
       }
     case 'SET_PRODUCT':
-      data.quantity = 1;
+      data.data.quantity = 1;
       return {
         ...state,
         errors: undefined,
-        product: data,
+        product: data.data,
         loading: false,
         loaded: true,
       }
     case 'SET_PRODUCT_ERROR':
       return {
         ...state,
-        errors: data,
+        errors,
         loading: false,
         loaded: false,
       }

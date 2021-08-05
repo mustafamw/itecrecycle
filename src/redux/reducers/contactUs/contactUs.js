@@ -6,7 +6,7 @@ const initState = {
 }
 
 const contactUs = (state = initState, action) => {
-  const { type, data } = action;
+  const { type, data, errors } = action;
   switch (type) {
     case 'CONTACT_US':
       return {
@@ -26,7 +26,7 @@ const contactUs = (state = initState, action) => {
         ...state,
         loading: false,
         loaded: false,
-        errors: data,
+        errors,
       }
     default:
       return state

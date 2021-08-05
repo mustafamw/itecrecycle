@@ -6,7 +6,7 @@ const initState = {
 }
 
 const activate = (state = initState, action) => {
-  const { type, data } = action;
+  const { type, data, errors } = action;
   switch (type) {
     case 'ACTIVATE':
       return {
@@ -25,7 +25,7 @@ const activate = (state = initState, action) => {
         ...state,
         loading: false,
         loaded: true,
-        errors: data,
+        errors,
       }
     default:
       return state

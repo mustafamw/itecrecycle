@@ -40,27 +40,32 @@ class ProductsView extends React.Component {
   }
 
   handleScroll() {
+    const { loaded } = this.props.productsState;
     if($(window).scrollTop() + $(window).height() === $(document).height()) {
+      if(!loaded) {
+        return
+      }
       this.loadMore();
+      $(window).scrollTop($(window).scrollTop() - 1)
     }
   }
 
   render() {
     const { productsState } = this.props;
-    const { errors, loaded, loading } = productsState;
+    const { products, loaded, loading } = productsState;
     return (
       <div className="products">
         {
-          loaded && !isEmpty(errors) ?
+          loaded && products.length === 0 ?
             <div className="col-12"> 
               Results not loaded
             </div> : null
         }
         {
-          loaded && isEmpty(errors) ?
-          <>
+          products.length > 0 ?
+          <div className="container">
             <ProductsComponent {...productsState} /> 
-          </>
+          </div>
           : null
         }
         { 

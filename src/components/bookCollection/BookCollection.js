@@ -56,7 +56,6 @@ class BookCollectionComponent extends React.Component {
             return errors;
           }}
           onSubmit={(values, { resetForm }) => {
-            console.log(errors)
             if (!isEmpty(errors)){
               return;
             }

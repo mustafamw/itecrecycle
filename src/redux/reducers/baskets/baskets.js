@@ -7,7 +7,7 @@ const initState = {
 }
 
 const baskets = (state = initState, action) => {
-  const { type, product, productId, index, data } = action;
+  const { type, product, productId, index, data, errors } = action;
   switch (type) {
     case 'ADD_BASKET':
       return {
@@ -35,7 +35,7 @@ const baskets = (state = initState, action) => {
         ...state,
         loading: false,
         loaded: false,
-        errors: data,
+        errors,
       }
     case 'REMOVE_BASKET_PRODUCT_ID':
       return {

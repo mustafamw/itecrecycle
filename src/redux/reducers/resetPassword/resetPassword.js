@@ -6,7 +6,7 @@ const initState = {
 }
 
 const resetPassword = (state = initState, action) => {
-  const { type, data } = action;
+  const { type, data, errors } = action;
   switch (type) {
     case 'RESET_PASSWORD':
       return {
@@ -25,7 +25,7 @@ const resetPassword = (state = initState, action) => {
         ...state,
         loading: false,
         loaded: true,
-        errors: data,
+        errors,
       }
     default:
       return state
