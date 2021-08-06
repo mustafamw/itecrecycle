@@ -1,6 +1,8 @@
 @import '../../scss/global/Global';
 
 .basket-summary {
+  position: sticky;
+  top: 45px;
   background: white;
   padding-top: 20px;
   padding-bottom: 20px;

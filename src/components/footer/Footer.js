@@ -31,9 +31,9 @@ class Footer extends Component {
               <div className="clear-both"></div>
               <small>
                 support@itecrecycle.com<br />
-                {/* <span className="curser-pointer" onClick={this.call}>
+                <span className="curser-pointer" onClick={this.call}>
                   {ContactNo}
-                </span> */}
+                </span>
               </small>
             </div>
             <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">

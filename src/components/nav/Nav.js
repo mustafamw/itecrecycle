@@ -17,7 +17,7 @@ class NavComponent extends React.Component {
                         <NavLink to="/data-destruction" activeClassName="active">Data Destruction</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/products" activeClassName="active">Products</NavLink>
+                        <NavLink to="/products" activeClassName="active">Laptop Warehouse</NavLink>
                     </li>
                     <li>
                         <NavLink to="/contact-us" activeClassName="active">Contact us</NavLink>

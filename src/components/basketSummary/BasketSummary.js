@@ -83,7 +83,6 @@ class BasketSummaryComponent extends React.Component {
                       data-toggle="modal" 
                       data-target="#loginModal" 
                       >Login</button>
-                      <LoginModalComponent />
                     </>
                     ) : 
                     <>
@@ -99,6 +98,7 @@ class BasketSummaryComponent extends React.Component {
             </div>
           </div>
         </div>
+        <LoginModalComponent />
         <ConfirmBookingComponent
           confirmBookingId={confirmBookingId} 
           bookBasket={this.bookBasket}

@@ -36,41 +36,41 @@ class ProductViewComponent extends React.Component {
               {title}
             </h1>
             <h3>
-              Description
+              Specification
             </h3>
             <p dangerouslySetInnerHTML={{ __html: description }}>
             </p>
-            <h3>
+            {/* <h3>
               Date Created
             </h3>
             <p>
               {moment(created).format('DD/MM/YYYY hh:mmA')}
-            </p>
-              <div className="row">
-                { productState.product.stock > 0 ?
-                <div className="col-3 p-0 quantity-container">
-                  <h3>
-                    Quantity
-                  </h3>
-                  <div className="input-group mb-3">
-                    <button className="btn btn-sm btn-secondary"
-                      onClick={(e) => { decrementQuantity(productState.product) }}
-                      disabled={quantity <= 1}><FontAwesomeIcon icon="minus" /></button>
-                    <h3 className="p-0 m-0">{quantity}x</h3>
-                    <button className="btn btn-sm btn-secondary"
-                      onClick={(e) => { incrementQuantity(productState.product) }}
-                      disabled={quantity >= stock}><FontAwesomeIcon icon="plus" /></button>
-                  </div>
-                </div> : null }
-                <div className="col-12 p-0">
-                  <h3>
-                    Total
-                  </h3>
-                  <div className="price">
-                    <h3>{currencyFormat(total)}</h3>
-                  </div>
+            </p> */}
+            <div className="row">
+              { productState.product.stock > 0 ?
+              <div className="col-3 p-0 quantity-container">
+                <h3>
+                  Quantity
+                </h3>
+                <div className="input-group mb-3">
+                  <button className="btn btn-sm btn-secondary"
+                    onClick={(e) => { decrementQuantity(productState.product) }}
+                    disabled={quantity <= 1}><FontAwesomeIcon icon="minus" /></button>
+                  <h3 className="p-0 m-0">{quantity}x</h3>
+                  <button className="btn btn-sm btn-secondary"
+                    onClick={(e) => { incrementQuantity(productState.product) }}
+                    disabled={quantity >= stock}><FontAwesomeIcon icon="plus" /></button>
+                </div>
+              </div> : null }
+              <div className="col-12 p-0">
+                <h3>
+                  Total
+                </h3>
+                <div className="price">
+                  <h3>{currencyFormat(total)}</h3>
                 </div>
               </div>
+            </div>
             <p>
               { productState.product.stock > 0 ?
                 <button type="button"

@@ -15,7 +15,6 @@ class ProductsView extends React.Component {
     }
     this.loadMore = this.loadMore.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
-    
   }
 
   componentDidMount() {
@@ -28,8 +27,17 @@ class ProductsView extends React.Component {
     this.props.clearProducts();
   }
 
+  componentDidUpdate() {
+    // console.log(($(window).scrollTop() + $(window).height()))
+    // console.log($(document).height())
+    const { loaded } = this.props.productsState;
+    if ((loaded && $(window).scrollTop() + $(window).height()) + 10 >= $(document).height()) {
+      this.loadMore();
+    }
+  }
+
   loadMore() {
-    const { pagination, loading } = this.props.productsState;
+    const { pagination, loaded, loading } = this.props.productsState;
     if((!isEmpty(pagination) && this.state.pageNo > pagination.totalPages) || loading){
       return
     }
@@ -41,13 +49,10 @@ class ProductsView extends React.Component {
 
   handleScroll() {
     const { loaded } = this.props.productsState;
-    if($(window).scrollTop() + $(window).height() === $(document).height()) {
-      if(!loaded) {
-        return
-      }
+    if((loaded && $(window).scrollTop() + $(window).height()) + 10 >= $(document).height()) {
       this.loadMore();
-      $(window).scrollTop($(window).scrollTop() - 1)
     }
+
   }
 
   render() {
@@ -57,13 +62,25 @@ class ProductsView extends React.Component {
       <div className="products">
         {
           loaded && products.length === 0 ?
-            <div className="col-12"> 
-              Results not loaded
-            </div> : null
+          <div className="container">
+            <div className="row">
+              <div className="col-12"> 
+                Results not loaded
+              </div>
+            </div>
+          </div> : null
         }
         {
           products.length > 0 ?
           <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <h1 className="title">Laptop Warehouse</h1>
+                <p>
+                  Here at laptop warehouse we have wide range of refurbished laptops and computers for businesses and the public. These are Robust, strong machines made to last long. We can post anywhere in the UK. 
+                </p>
+              </div>
+            </div>
             <ProductsComponent {...productsState} /> 
           </div>
           : null
