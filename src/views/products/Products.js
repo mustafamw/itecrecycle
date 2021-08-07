@@ -28,10 +28,9 @@ class ProductsView extends React.Component {
   }
 
   componentDidUpdate() {
-    // console.log(($(window).scrollTop() + $(window).height()))
-    // console.log($(document).height())
+    console.log('componentDidUpdate')
     const { loaded } = this.props.productsState;
-    if ((loaded && $(window).scrollTop() + $(window).height()) + 10 >= $(document).height()) {
+    if ((loaded && $(window).scrollTop() + $(window).height()) + 338 >= $(document).height()) {
       this.loadMore();
     }
   }
@@ -49,7 +48,7 @@ class ProductsView extends React.Component {
 
   handleScroll() {
     const { loaded } = this.props.productsState;
-    if((loaded && $(window).scrollTop() + $(window).height()) + 10 >= $(document).height()) {
+    if((loaded && $(window).scrollTop() + $(window).height()) + 338 >= $(document).height()) {
       this.loadMore();
     }
 
