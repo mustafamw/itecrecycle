@@ -9,7 +9,7 @@ import { withRouter } from "react-router-dom";
 import $ from 'jquery';
 import ConfirmBookingComponent from '../modals/confirmBooking/ConfirmBooking';
 import { setItem } from '../../utils/sessionStorage';
-import Tooltip from "react-simple-tooltip"
+import Tooltip from 'rc-tooltip';
 
 const confirmBookingId = 'confirmBooking';
 
@@ -71,18 +71,16 @@ class BasketSummaryComponent extends React.Component {
                   !isLoggedIn ? 
                   (
                     <>
-                      <Tooltip content="Please Signup/Login to continue booking" className="display-block">
+                      <Tooltip placement="top" trigger={['hover']} overlay={<span>Please Signup/Login to continue booking</span>}>
                         <button
-                          className="btn btn-primary btn-block btn-sm rounded-0" 
-                          disabled={!isLoggedIn}
-                          data-tip
-                          data-for="registerTip">Book It</button>
+                          className="btn btn-primary btn-block btn-sm rounded-0 disabled" 
+                          disabled={false}>Book It</button>
                       </Tooltip>
                       <button
-                      className="btn btn-primary btn-block btn-sm rounded-0"
-                      data-toggle="modal" 
-                      data-target="#loginModal" 
-                      >Login</button>
+                        className="btn btn-primary btn-block btn-sm rounded-0"
+                        data-toggle="modal" 
+                        data-target="#loginModal" 
+                        >Login</button>
                     </>
                     ) : 
                     <>

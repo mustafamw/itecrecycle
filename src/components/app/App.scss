@@ -3,9 +3,9 @@
   height: 100vh;
 }
 .wrap {
-  min-height: calc(100vh - 180px);
-  margin-bottom: -55px;
-  background: $WHITE-B;
+  min-height: calc(100vh - 242px);
+  background: rgb(0,36,1);
+  background: linear-gradient(90deg, rgba(0,36,1,1) 0%, rgba(9,121,21,1) 100%, rgba(0,0,0,1) 100%);
   &.resend-activation,
   &.activate,
   &.signup,
@@ -15,6 +15,27 @@
     background: rgb(0,36,1);
     background: linear-gradient(90deg, rgba(0,36,1,1) 0%, rgba(9,121,21,1) 100%, rgba(0,0,0,1) 100%);
   }
+  @include respond-to(xxs){
+    min-height: calc(100vh - 428px);
+  }
+  @include respond-to(xs){
+    min-height: calc(100vh - 307px);
+  }
+  @include respond-to(sm){
+    min-height: calc(100vh - 314px);
+  }
+  @include respond-to(md){
+    min-height: calc(100vh - 242px);
+  }
+  @include respond-to(lg){
+    min-height: calc(100vh - 242px);
+  }
+  @include respond-to(xl){
+    min-height: calc(100vh - 236px);
+  }
+  // @include respond-to(md){
+  //   min-height: calc(100vh - 307px);
+  // }
 }
 
 .footer,

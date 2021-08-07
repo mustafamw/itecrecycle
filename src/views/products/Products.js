@@ -64,8 +64,8 @@ class ProductsView extends React.Component {
           loaded && products.length === 0 ?
           <div className="container">
             <div className="row">
-              <div className="col-12"> 
-                Results not loaded
+              <div className="col-12">
+                <h3 className="not-found mt-3 mb-4">Results not loaded</h3>
               </div>
             </div>
           </div> : null

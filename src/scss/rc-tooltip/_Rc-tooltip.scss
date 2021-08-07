@@ -1,0 +1,13 @@
+.rc-tooltip {
+  .rc-tooltip-content {
+    .rc-tooltip-arrow {
+      border-top-color: black;
+    }
+    .rc-tooltip-inner {
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 3px;
+      background: black;
+    }
+  }
+}

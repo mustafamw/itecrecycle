@@ -23,9 +23,7 @@ class ActivateView extends React.Component {
     }
 
     return(
-      <div className="container">
-        <LoginComponent />
-      </div> 
+      <LoginComponent />
     );
   }
 }

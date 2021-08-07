@@ -38,7 +38,7 @@ class LoginComponent extends React.Component {
 
     return (
       
-      <div className="col-12 col-sm-10 col-md-8 col-lg-7 col-xl-5 formik">
+      <div className="formik login-formik">
         <Formik
           initialValues={{ email: '', password: '' }}
           validate={values => {
@@ -71,7 +71,7 @@ class LoginComponent extends React.Component {
             handleSubmit,
             isSubmitting,
           }) => (
-            <form onSubmit={handleSubmit} className="pt-5">
+            <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <h1 className="center pb-3">
                   Log in
@@ -118,7 +118,7 @@ class LoginComponent extends React.Component {
                 disabled={loginState.loading}>
                 Log In
               </button>
-              <div className="form-group forgot-password pt-4 center">
+              <div className="form-group pt-4 center">
                 Not Registered?&nbsp; 
                 <NavLink className="green pt-4" to="/signup">
                   Sign Up

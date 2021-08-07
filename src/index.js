@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/app/App';
 import * as serviceWorker from './serviceWorker';
+import 'rc-tooltip/assets/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.scss';

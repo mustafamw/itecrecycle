@@ -33,7 +33,7 @@ class SignupComponent extends React.Component {
 
     return (
       
-      <div className="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-6 formik">
+      <div className="formik signup-formik">
         <Formik
           enableReinitialize={true}
           initialValues={{ 
@@ -110,7 +110,7 @@ class SignupComponent extends React.Component {
             handleSubmit,
             isSubmitting,
           }) => (
-            <form onSubmit={handleSubmit} className="pt-5 mt-5">
+            <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <h1 className="center pb-3">
                   Signup
@@ -229,7 +229,7 @@ class SignupComponent extends React.Component {
                 disabled={loading}>
                 Signup
               </button>
-              <div className="form-group forgot-password pt-4 center">
+              <div className="form-group pt-4 center">
                 Already have an account?&nbsp; 
                 <NavLink className="green pt-4" to="/login">
                   Login

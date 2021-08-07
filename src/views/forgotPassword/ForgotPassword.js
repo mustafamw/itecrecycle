@@ -5,9 +5,7 @@ import ForgotPasswordComponent from '../../components/forgotPassword/ForgotPassw
 class ForgotPaswordView extends React.Component {
   render() {
     return(
-      <div className="container">
-        <ForgotPasswordComponent />
-      </div> 
+      <ForgotPasswordComponent />
     );
   }
 }

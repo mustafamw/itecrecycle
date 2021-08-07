@@ -9,7 +9,7 @@ class ForgotPasswordComponent extends React.Component {
     const { forgotPassword, loading } = this.props;
 
     return (
-      <div className="col-12 col-sm-10 col-md-8 col-lg-7 col-xl-5 formik">
+      <div className="formik forgot-password-formik">
         <Formik
           initialValues={{ email: '' }}
           validate={values => {
@@ -36,7 +36,7 @@ class ForgotPasswordComponent extends React.Component {
             handleSubmit,
             isSubmitting,
           }) => (
-            <form onSubmit={handleSubmit} className="pt-5">
+            <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <h1 className="center pb-3">
                   Find Your Account

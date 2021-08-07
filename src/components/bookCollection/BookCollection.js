@@ -8,7 +8,8 @@ import { NavLink } from "react-router-dom";
 import { isEmpty } from 'lodash';
 import { getCookies } from '../../utils/cookies';
 import LoginModalComponent  from '../modals/loginModal/LoginModal';
-import Tooltip from "react-simple-tooltip"
+import Tooltip from 'rc-tooltip';
+
 class BookCollectionComponent extends React.Component {
   componentWillUnmount() {
     this.props.setItemsCollectionReset();
@@ -237,10 +238,10 @@ class BookCollectionComponent extends React.Component {
                 !isLoggedIn ? 
                 (
                   <>
-                    <Tooltip content="Please Signup/Login to continue booking" className="display-block">
-                      <button type="submit" 
-                        className="btn btn-primary btn-block btn-lg p-3 rounded-0" 
-                        disabled={loading || !isLoggedIn}>
+                    <Tooltip placement="top" trigger={['hover']} overlay={<span>Please Signup/Login to continue booking</span>}>
+                      <button type="button" 
+                        className="btn btn-primary btn-block btn-lg p-3 rounded-0 disabled" 
+                        disabled={false}>
                         Book Item Collection
                       </button>
                     </Tooltip>
