@@ -5,7 +5,6 @@ import {
   removeCookies,
 } from '../../../utils/cookies';
 import jwt_decode from "jwt-decode";
-import $ from 'jquery';
 
 export function login(payload) {
   return async (dispatch) => {
@@ -15,8 +14,6 @@ export function login(payload) {
           });
           const data = await httpRequest(requestMethod.POST, `v1/login`, {}, payload)
           setCookies('jwt', data.token);
-          $(`#loginModal`).modal('hide');
-          $('body').removeClass('modal-open');
           dispatch({
               type: 'SET_LOGIN',
               data: jwt_decode(data.token)

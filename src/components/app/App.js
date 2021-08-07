@@ -31,7 +31,6 @@ class AppComponent extends React.Component {
   }
 
   render() {
-    $('.modal-backdrop').remove();
     return (
       <Router>
         <AlertComponent />
