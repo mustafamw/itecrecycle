@@ -20,7 +20,7 @@ class ItemsCollectionComponent extends React.Component {
       );
     })
     return (
-      <div className="items-collection-container">
+      <div className="items-collection-container pt-1">
         {itemsCollection}
       </div >
     );

@@ -6,7 +6,7 @@ import ItemsCollectionComponent from '../../components/itemsCollection/ItemsColl
 class ItemsCollectionView extends React.Component {
   render() {
     return (
-      <div className="items-collection pt-2">
+      <div className="items-collection">
         <section>
           <div className="container">
             <div className="col-12">
@@ -17,7 +17,7 @@ class ItemsCollectionView extends React.Component {
                 <p>
                   Electronic rubbish, and computer equipment in particular, is a rapidly expanding stream of UK waste. Reduce your carbon footprint and waste costs at the same time by recycling your used computers. We offer CASH for your used/broken computers.
                 </p>
-                <Link to="/items-collection/book" className="button-green">Book a collection</Link>
+                <Link to="/items-collection/book" className="button-green inline-block">Book a collection</Link>
                 <ItemsCollectionComponent />
               </div>
             </div>

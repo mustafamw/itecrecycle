@@ -72,17 +72,23 @@ class ProductsView extends React.Component {
         }
         {
           products.length > 0 ?
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
-                <h1 className="title">Laptop Warehouse</h1>
-                <p>
-                  Here at laptop warehouse we have wide range of refurbished laptops and computers for businesses and the public. These are Robust, strong machines made to last long. We can post anywhere in the UK. 
-                </p>
+          <div className="products-list container p-0">
+            <section>
+              <div className="container">
+                <div className="row">
+                  <div className="col-12">
+                    <h1 className="title">Laptop Warehouse</h1>
+                    <p className="m-0">
+                      Here at laptop warehouse we have wide range of refurbished laptops and computers for businesses and the public. These are Robust, strong machines made to last long. We can post anywhere in the UK. 
+                    </p>
+                  </div>
+                  <div className="col-12">
+                    <ProductsComponent {...productsState} /> 
+                  </div>
+                </div>
               </div>
-            </div>
-            <ProductsComponent {...productsState} /> 
-          </div>
+            </section>
+          </div >
           : null
         }
         { 

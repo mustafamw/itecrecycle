@@ -76,7 +76,7 @@ class BookCollectionComponent extends React.Component {
             handleSubmit,
             isSubmitting,
           }) => (
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="pl-0 pr-0 pt-3">
               <div className="form-group">
                 <div className="row">
                   <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pl-0 pr-1">

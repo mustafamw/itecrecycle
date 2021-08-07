@@ -13,7 +13,7 @@ class ProductsComponent extends React.Component {
         });
 
         return (
-            <div className="col-12 products-list">
+            <div className="products-list pt-1">
                 {productsList}
             </div>
         );

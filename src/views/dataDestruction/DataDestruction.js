@@ -8,7 +8,7 @@ class DataDestructionView extends React.Component {
   render() {
     return (
       <div className="recycle-scheme pt-2">
-        <section className="pt-3 pb-3">
+        <section className="pt-2 pb-3">
           <div className="container">
             <div className="row">
               <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 order-xs-2">
