@@ -2,6 +2,7 @@
     background: white;
     margin-bottom: 10px;
     box-shadow: 0px 0px 5px #e2e2e2;
+    border: 1px solid #e9e8e8;
     .align-center {
         align-items: center;
     }
@@ -36,5 +37,8 @@
         &:hover {
             text-decoration: underline;
         }
+    }
+    img {
+        margin: 0px;
     }
 }

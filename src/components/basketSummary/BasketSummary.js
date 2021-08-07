@@ -12,7 +12,7 @@ import { setItem } from '../../utils/sessionStorage';
 import Tooltip from 'rc-tooltip';
 
 const confirmBookingId = 'confirmBooking';
-
+const loginModal = 'loginModal';
 class BasketSummaryComponent extends React.Component {
 
   constructor(props) {
@@ -29,18 +29,26 @@ class BasketSummaryComponent extends React.Component {
     $(`#${confirmBookingId}`).modal();
   }
 
+  closeModal(id) {
+    $(`#${id}`).modal('hide');
+    $('body').removeClass('modal-open');
+  }
+
   bookBasket() {
     const baskets = this.props.basketsState.baskets;
     const token = getCookies('jwt');
     this.props.bookBasket(token, { baskets });
-    $(`#${confirmBookingId}`).modal('hide');
-    $('body').removeClass('modal-open');
+    this.closeModal(confirmBookingId)
   }
 
   render() {
 
     const { basketsState, loginState } = this.props;
-    const { isLoggedIn, errors } = loginState; 
+    const { isLoggedIn, errors } = loginState;
+    
+    if(isLoggedIn) {
+      this.closeModal(loginModal)
+    }
 
     if(basketsState.loaded && basketsState.confirmation.referenceNo){
       setItem('confirmation', basketsState.confirmation);
@@ -96,7 +104,7 @@ class BasketSummaryComponent extends React.Component {
             </div>
           </div>
         </div>
-        <LoginModalComponent />
+        <LoginModalComponent /> 
         <ConfirmBookingComponent
           confirmBookingId={confirmBookingId} 
           bookBasket={this.bookBasket}

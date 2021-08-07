@@ -13,7 +13,7 @@ class BasketComponent extends React.Component {
       <div className="col-12 p-0 basket-item">
         <div className="row align-center">
           <div className="col-3 p-0">
-            <img src={image}/>
+            <img src={image} />
           </div>
           <div className="col-9 p-0">
             <div className="row">

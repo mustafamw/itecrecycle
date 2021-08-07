@@ -71,7 +71,7 @@ class ProductsView extends React.Component {
         }
         {
           products.length > 0 ?
-          <div className="products-list container p-0">
+          <div className="products-list p-0">
             <section>
               <div className="container">
                 <div className="row">

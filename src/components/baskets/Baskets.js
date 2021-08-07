@@ -29,7 +29,6 @@ class BasketsComponent extends React.Component {
       <>
         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
           <div className="baskets-list">
-            {/* {title} */}
             {baskets.length > 0 ? baskets : notFound}
           </div>
         </div>
