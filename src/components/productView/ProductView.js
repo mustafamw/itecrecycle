@@ -32,7 +32,7 @@ class ProductViewComponent extends React.Component {
             <img srcSet={image} alt={title} title={title} className="m-0"/>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
-            <h1 className="title">
+            <h1 className="title pt-2">
               {title}
             </h1>
             <h3>
