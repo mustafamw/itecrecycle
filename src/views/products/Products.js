@@ -28,7 +28,6 @@ class ProductsView extends React.Component {
   }
 
   componentDidUpdate() {
-    console.log('componentDidUpdate')
     const { loaded } = this.props.productsState;
     if ((loaded && $(window).scrollTop() + $(window).height()) + 338 >= $(document).height()) {
       this.loadMore();
@@ -71,7 +70,7 @@ class ProductsView extends React.Component {
         }
         {
           products.length > 0 ?
-          <div className="products-list p-0">
+          <div className="p-0">
             <section>
               <div className="container">
                 <div className="row">
