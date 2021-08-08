@@ -15,7 +15,9 @@ const product = (state = initState, action) => {
         loaded: false
       }
     case 'SET_PRODUCT':
-      data.data.quantity = 1;
+      if(data.data) {
+        data.data.quantity = 1;
+      }
       return {
         ...state,
         errors: undefined,
