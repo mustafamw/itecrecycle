@@ -1,1 +1,1 @@
-export const ContactNo = '07908662870';
+export const ContactNo = '01922627161';
