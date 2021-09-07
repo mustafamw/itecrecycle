@@ -1,33 +1,43 @@
 @import '../../../scss/global/Global';
 
 .product{
-    flex: 0 0 23%;
     margin: 1%;
     background: white;
+    width: 23%;
     @include transition(all 0.5s ease-in-out);
     @include respond-to(xl) {
-        flex: 0 0 23%;
+        width: 23%;
     }
     @include respond-to(lg) {
-        flex: 0 0 23%;
+        width: 23%;
     }
     @include respond-to(md) {
-        flex: 0 0 31.33%;
+        width: 31.33%;
     }
     @include respond-to(sm) {
-        flex: 0 0 48%;
+        width: 48%;
     }
     @include respond-to(xs) {
-        flex: 0 0 48%;
+        width: 48%;
     }
     @include respond-to(xxs) {
-        flex: 0 0 100%;
+        width: 100%;
     }
     a {
-
         .image {
             position: relative;
-
+            height: 170px;
+            overflow: hidden;
+            img {
+                position: absolute;
+                height: 100%;
+                width: auto;
+                float: none;
+                margin: auto;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%)
+            }
             .price {
                 position: absolute;
                 right: 5px;
