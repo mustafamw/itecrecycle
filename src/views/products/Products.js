@@ -77,7 +77,7 @@ class ProductsView extends React.Component {
                   <div className="col-12">
                     <h1 className="title">Laptop Warehouse</h1>
                     <p className="m-0">
-                      Here at laptop warehouse we have wide range of refurbished laptops and computers for businesses and the public. These are Robust, strong machines made to last long. We can post anywhere in the UK. 
+                    Here at Itec Recycle Laptop Warehouse we have a wide range of outstanding refurbished laptops, tablets and computers. From Top brands such as Dell, HP, Lenovo and Apple for businesses, Schools and the public. These are robust business machines, made to last longer than non-commercial laptops at affordable prices. We can post anywhere in the UK. 
                     </p>
                   </div>
                   <div className="col-12">
